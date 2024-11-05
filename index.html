@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uncontained Living</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="nav-header">
+            <div class="logo">Uncontained Living</div>
+            <div class="nav-buttons">
+                <a href="about.html" class="nav-btn">About Us</a>
+                <a href="services.html" class="nav-btn">Services</a>
+                <a href="portfolio.html" class="nav-btn">Portfolio</a>
+                <a href="contact.html" class="nav-btn">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Welcome to Uncontained Living</h1>
+        <!-- Add your main content here -->
+    </main>
+
+    <footer>
+        <div class="footer-buttons">
+            <a href="privacy.html" class="footer-btn">Privacy Policy</a>
+            <a href="terms.html" class="footer-btn">Terms of Service</a>
+            <a href="faq.html" class="footer-btn">FAQ</a>
+            <a href="blog.html" class="footer-btn">Blog</a>
+        </div>
+    </footer>
+</body>
+</html>
+
+:root {
+    --purple: #800080;
+    --black: #000000;
+    --gold: #FFD700;
+    --red: #FF0000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Garamond, serif;
+    font-size: 12pt;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: var(--black);
+    padding: 1rem;
+}
+
+.nav-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    color: var(--gold);
+    font-size: 24pt;
+    font-weight: bold;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-btn {
+    color: var(--purple);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--purple);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+    background-color: var(--purple);
+    color: white;
+}
+
+main {
+    flex: 1;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+footer {
+    background-color: var(--black);
+    padding: 1rem;
+}
+
+.footer-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-btn {
+    color: var(--red);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--red);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.footer-btn:hover {
+    background-color: var(--red);
+    color: white;
+}
