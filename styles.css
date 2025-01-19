@@ -78,10 +78,10 @@ footer {
 }
 
 .footer-btn {
-    color: var(--red);
+    color: var(--purple);
     text-decoration: none;
     padding: 0.5rem 1rem;
-    border: 2px solid var(--red);
+    border: 2px solid var(--purple);
     border-radius: 4px;
     transition: all 0.3s ease;
 }
