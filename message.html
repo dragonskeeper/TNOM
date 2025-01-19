@@ -23,8 +23,10 @@
 
     <main>
           
-	     <title>Message Board</title>
+<head>
+  <title>Message Board</title>
   <style>
+    /* Basic styling for better readability */
     body {
       font-family: sans-serif;
     }
@@ -53,20 +55,41 @@
   <button onclick="sendMessage()">Submit</button>
 
   <script>
+    // Simulate in-memory storage (replace with actual server-side storage)
+    let messages =;
+
     function sendMessage() {
       const messageInput = document.getElementById('messageInput');
       const messageBoard = document.getElementById('messageBoard');
 
       if (messageInput.value.trim() !== '') {
-        const newMessage = document.createElement('div');
-        newMessage.classList.add('message');
-        newMessage.textContent = messageInput.value;
-        messageBoard.appendChild(newMessage);
+        const newMessage = {
+          text: messageInput.value,
+          timestamp: new Date().toISOString() 
+        };
+        messages.push(newMessage); 
 
+        displayMessages();
         messageInput.value = ''; // Clear the input field
       }
     }
+
+    function displayMessages() {
+      messageBoard.innerHTML = ''; // Clear existing messages
+
+      messages.forEach(message => {
+        const messageDiv = document.createElement('div');
+        messageDiv.classList.add('message');
+        messageDiv.textContent = `${message.timestamp.slice(0, 16)} - ${message.text}`; 
+        messageBoard.appendChild(messageDiv);
+      });
+    }
+
+    // Initial display (if any messages exist)
+    displayMessages(); 
   </script>
+
+
     </main>
 
     <footer>
