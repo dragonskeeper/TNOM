@@ -68,16 +68,7 @@ footer {
     background-color: var(--black);
     padding: 1rem;
 }
-
-.footer-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.footer-btn {
+footer-btn {
     color: var(--purple);
     text-decoration: none;
     padding: 0.5rem 1rem;
@@ -90,3 +81,12 @@ footer {
     background-color: var(--purple);
     color: white;
 }
+
+.footer-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
