@@ -1,20 +1,19 @@
-
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Message Board</title>
+    <title>Evidence</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <nav class="nav-header">
-            <div class="logo">Message Board</div>
+            <div class="logo">Evidence</div>
             <div class="nav-buttons">
-		<a href="index.html" class="nav-btn">Home</a>    
+		 <a href="index.html" class="nav-btn">Home</a>
                 <a href="about.html" class="nav-btn">About</a>
-                <a href="right.html" class="nav-btn">Privilege of Rights</a>
+                <a href="right.html" class="nav-btn">Priviledge of Rights</a>
                 <a href="findings.html" class="nav-btn">Findings</a>
                 <a href="contact.html" class="nav-btn">Contact</a>
             </div>
@@ -22,63 +21,21 @@
     </header>
 
     <main>
-  <title>Message Board</title>
-  <style>
-    /* Basic styling for better readability */
-    body {
-      font-family: sans-serif;
-    }
-    .message-board {
-      border: 1px solid #ccc;
-      padding: 10px;
-      margin-bottom: 10px;
-      min-height: 200px; /* Adjust as needed */
-    }
-    .message {
-      margin-bottom: 5px;
-      border: 1px solid #eee;
-      padding: 5px;
-      border-radius: 3px;
-    }
-  </style>
-</head>
-<body>
+            <h1>Evidence</h1>
+	<HR>
+	<BR>
+	    <img src="BusinessCard_2024-08-03_090927.jpg" alt="UTAH THE STATE AND IT'S GOVERNMENT" width="700" height="600" title="UTAH THE STATE AND IT'S GOVERNMENT">
 
-  <h2>Message Board</h2>
-
-  <div class="message-board" id="messageBoard">
-    </div>
-
-  <input type="text" id="messageInput" placeholder="Enter your message..." style="width: 100%;">
-  <button onclick="sendMessage()">Submit</button>
-
-  <script>
-    // Simulate in-memory storage (replace with actual server-side storage)
-    let messages =;
-
-    function sendMessage() {
-      const messageInput = document.getElementById('messageInput');
-      const messageBoard = document.getElementById('messageBoard');
-
-      if (messageInput.value.trim() !== '') {
-        const newMessage = {
-          text: messageInput.value,
-          timestamp: new Date().toISOString() 
-        };
-        messages.push(newMessage); 
-
-        // Create and append new message to the board
-        const messageDiv = document.createElement('div');
-        messageDiv.classList.add('message');
-        messageDiv.textContent = `${message.timestamp.
     </main>
+
     <footer>
         <div class="footer-buttons">
             <a href="privacy.html" class="footer-btn">Privacy Policy</a>
             <a href="contract.html" class="footer-btn">Contract</a>
             <a href="resources.html" class="footer-btn">Resources</a>
             <a href="message.html" class="footer-btn">Message Board</a>
-        </div>
+	    <a href="evidence.html" class="footer-btn">Evidence</a>	
+	</div>
     </footer>
 </body>
 </html>
