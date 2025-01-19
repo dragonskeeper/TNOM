@@ -68,7 +68,27 @@ footer {
     background-color: var(--black);
     padding: 1rem;
 }
-footer-btn {
+
+.nav-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    color: var(--gold);
+    font-size: 24pt;
+    font-weight: bold;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-btn {
     color: var(--purple);
     text-decoration: none;
     padding: 0.5rem 1rem;
@@ -77,16 +97,14 @@ footer-btn {
     transition: all 0.3s ease;
 }
 
-.footer-btn:hover {
+.nav-btn:hover {
     background-color: var(--purple);
     color: white;
 }
 
-.footer-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
+main {
+    flex: 1;
+    padding: 2rem;
     max-width: 1200px;
     margin: 0 auto;
 }
-
