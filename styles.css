@@ -87,6 +87,6 @@ footer {
 }
 
 .footer-btn:hover {
-    background-color: var(--red);
+    background-color: var(--purple);
     color: white;
 }
