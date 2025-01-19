@@ -26,7 +26,6 @@
 <head>
   <title>Message Board</title>
   <style>
-    /* Basic styling for better readability */
     body {
       font-family: sans-serif;
     }
@@ -34,7 +33,7 @@
       border: 1px solid #ccc;
       padding: 10px;
       margin-bottom: 10px;
-      min-height: 200px; /* Adjust as needed */
+      min-height: 200px;
     }
     .message {
       margin-bottom: 5px;
@@ -55,7 +54,6 @@
   <button onclick="sendMessage()">Submit</button>
 
   <script>
-    // Simulate in-memory storage (replace with actual server-side storage)
     let messages =;
 
     function sendMessage() {
@@ -70,12 +68,12 @@
         messages.push(newMessage); 
 
         displayMessages();
-        messageInput.value = ''; // Clear the input field
+        messageInput.value = '';
       }
     }
 
     function displayMessages() {
-      messageBoard.innerHTML = ''; // Clear existing messages
+      messageBoard.innerHTML = '';
 
       messages.forEach(message => {
         const messageDiv = document.createElement('div');
@@ -84,14 +82,9 @@
         messageBoard.appendChild(messageDiv);
       });
     }
-
-    // Initial display (if any messages exist)
     displayMessages(); 
   </script>
-
-
     </main>
-
     <footer>
         <div class="footer-buttons">
             <a href="privacy.html" class="footer-btn">Privacy Policy</a>
