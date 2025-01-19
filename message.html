@@ -22,10 +22,9 @@
     </header>
 
     <main>
-          
-<head>
   <title>Message Board</title>
   <style>
+    /* Basic styling for better readability */
     body {
       font-family: sans-serif;
     }
@@ -33,7 +32,7 @@
       border: 1px solid #ccc;
       padding: 10px;
       margin-bottom: 10px;
-      min-height: 200px;
+      min-height: 200px; /* Adjust as needed */
     }
     .message {
       margin-bottom: 5px;
@@ -54,6 +53,7 @@
   <button onclick="sendMessage()">Submit</button>
 
   <script>
+    // Simulate in-memory storage (replace with actual server-side storage)
     let messages =;
 
     function sendMessage() {
@@ -67,23 +67,10 @@
         };
         messages.push(newMessage); 
 
-        displayMessages();
-        messageInput.value = '';
-      }
-    }
-
-    function displayMessages() {
-      messageBoard.innerHTML = '';
-
-      messages.forEach(message => {
+        // Create and append new message to the board
         const messageDiv = document.createElement('div');
         messageDiv.classList.add('message');
-        messageDiv.textContent = `${message.timestamp.slice(0, 16)} - ${message.text}`; 
-        messageBoard.appendChild(messageDiv);
-      });
-    }
-    displayMessages(); 
-  </script>
+        messageDiv.textContent = `${message.timestamp.
     </main>
     <footer>
         <div class="footer-buttons">
