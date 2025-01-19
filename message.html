@@ -1,39 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Uncontained Living</title>
-    <link rel="stylesheet" href="styles.css">
+  <title>Message Board</title>
+  <style>
+    /* Basic styling for better readability */
+    body {
+      font-family: sans-serif;
+    }
+    .message-board {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 10px;
+      min-height: 200px; /* Adjust as needed */
+    }
+    .message {
+      margin-bottom: 5px;
+      border: 1px solid #eee;
+      padding: 5px;
+      border-radius: 3px;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <nav class="nav-header">
-            <div class="logo">Uncontained Living</div>
-            <div class="nav-buttons">
-                <a href="about.html" class="nav-btn">About</a>
-                <a href="right.html" class="nav-btn">Privilege of Rights</a>
-                <a href="findings.html" class="nav-btn">Findings</a>
-                <a href="contact.html" class="nav-btn">Contact</a>
-            </div>
-        </nav>
-    </header>
 
-    <main>
-            <form id="MessageForm">
-  <input type="text" id="userInput" placeholder="Enter your message">
-  <button type="submit">Submit</button>
-</form>
-<div id="display"></div>
-    </main>
+  <h2>Message Board</h2>
 
-    <footer>
-        <div class="footer-buttons">
-            <a href="privacy.html" class="footer-btn">Privacy Policy</a>
-            <a href="contract.html" class="footer-btn">Contract</a>
-            <a href="resources.html" class="footer-btn">Resources</a>
-            <a href="message.html" class="footer-btn">Message Board</a>
-        </div>
-    </footer>
+  <div class="message-board" id="messageBoard">
+    </div>
+
+  <input type="text" id="messageInput" placeholder="Enter your message..." style="width: 100%;">
+  <button onclick="sendMessage()">Submit</button>
+
+  <script>
+    function sendMessage() {
+      const messageInput = document.getElementById('messageInput');
+      const messageBoard = document.getElementById('messageBoard');
+
+      if (messageInput.value.trim() !== '') {
+        const newMessage = document.createElement('div');
+        newMessage.classList.add('message');
+        newMessage.textContent = messageInput.value;
+        messageBoard.appendChild(newMessage);
+
+        messageInput.value = ''; // Clear the input field
+      }
+    }
+  </script>
+
 </body>
 </html>
