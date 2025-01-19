@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Evidence</title>
+    <title>Message</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <nav class="nav-header">
-            <div class="logo">Evidence</div>
+            <div class="logo">Message</div>
             <div class="nav-buttons">
 		 <a href="index.html" class="nav-btn">Home</a>
                 <a href="about.html" class="nav-btn">About</a>
@@ -21,11 +21,62 @@
     </header>
 
     <main>
-            <h1>Evidence</h1>
+            <h1>Message</h1>
 	<HR>
 	<BR>
-	    <img src="BusinessCard_2024-08-03_090927.jpg" alt="UTAH THE STATE AND IT'S GOVERNMENT" width="700" height="600" title="UTAH THE STATE AND IT'S GOVERNMENT">
+  <div class="comments-container">
+    <div id="comment-list">
+      </div>
+  </div>
 
+  <div class="new-comment">
+    <h3>Leave a Comment</h3>
+    <textarea id="comment-text"></textarea>
+    <button onclick="postComment()">Post Comment</button>
+  </div>
+
+  <script>
+    function postComment() {
+      const commentText = document.getElementById('comment-text').value;
+
+      // Create a new comment element
+      const comment = document.createElement('div');
+      comment.classList.add('comment');
+
+      // Create comment header
+      const commentHeader = document.createElement('div');
+      commentHeader.classList.add('comment-header');
+
+      // Add author (for now, use a placeholder)
+      const author = document.createElement('span');
+      author.classList.add('comment-author');
+      author.textContent = 'Anonymous'; 
+      commentHeader.appendChild(author);
+
+      // Add timestamp
+      const timestamp = document.createElement('span');
+      timestamp.classList.add('comment-timestamp');
+      timestamp.textContent = ' - ' + new Date().toLocaleString();
+      commentHeader.appendChild(timestamp);
+
+      comment.appendChild(commentHeader);
+
+      // Add comment text
+      const commentContent = document.createElement('p');
+      commentContent.classList.add('comment-text');
+      commentContent.textContent = commentText;
+      comment.appendChild(commentContent);
+
+      // Add comment to the list
+      const commentList = document.getElementById('comment-list');
+      commentList.appendChild(comment);
+
+      // Clear the comment text area
+      document.getElementById('comment-text').value = '';
+    }
+  </script>
+
+</body>
     </main>
 
     <footer>
