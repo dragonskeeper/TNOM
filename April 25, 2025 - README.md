@@ -1,0 +1,1 @@
+this repository "TNOM" including all titles, locations, links, addresses, contents, files, spaces, cupcakes, basketballs, twinkle tinkle little stars, etc. are deleted and removed from github.com and other internet and intranet websites and world wide web sites, or ought to be.  If they are not, evil has prevailed and none shall use it ever, not including anyone.  
